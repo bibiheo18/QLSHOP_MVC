@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MyProject.Models.GioHang>
+
+@{
+    ViewBag.Title = "XacNhanDatHang";
+    Layout = "~/Views/Share/_LayoutPage.cshtml";
+}
+<div class="col-md-7">
+    <h2 class="font-weight-bold">Chi tiết hóa đơn</h2>
+    <div class="detailOrder">
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <p class="font-weight-bold">Tổng sản phẩm</p>
+            </div>
+            <div class="col-md-4">
+                <p>@ViewBag.TongSoLuong</p>
+            </div>
+        </div>
+        @foreach (var item in Model) { 
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="text-lowercase font-weight-bold">@item.tenSP</p>
+                </div>
+                <div class="col-md-4">
+                    <p>@String.Format("{0:0,0}", @item.donGia) VNĐ</p>
+                </div>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-8">
+                <p class="font-weight-bold">Giao hàng:</p>
+            </div>
+            <div class="col-md-4">
+                <p class="text-muted">Giao hàng miễn phí</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <p class="font-weight-bold">Phương thức thanh toán</p>
+            </div>
+            <div class="col-md-4">
+                <p class="text-muted">Kiểm tra thanh toán</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <p class="font-weight-bold">Thành tiền</p>
+            </div>
+            <div class="col-md-4">
+                <p>@String.Format("{0:0,0}", @ViewBag.TongThanhTien) VNĐ</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-5">
+    <div class="tks">
+        <strong>Cảm ơn bạn. Đơn mua hàng của bạn đã được nhận</strong>
+        <ul>
+            <li>Mã đơn hàng: <span class="font-weight-bold">@Session["MaHD"]</span></li>
+            <li>Ngày giao hàng: <span class="font-weight-bold">@Session["NgayGiao"]</span></li>
+            <li>Tổng cộng: <span class="font-weight-bold">@String.Format("{0:0,0}", @ViewBag.TongThanhTien) VNĐ</span></li>
+            <li>Phương thức thanh toán: <span class="font-weight-bold">Kiểm tra thanh toán</span></li>
+        </ul>
+    </div>
+</div>

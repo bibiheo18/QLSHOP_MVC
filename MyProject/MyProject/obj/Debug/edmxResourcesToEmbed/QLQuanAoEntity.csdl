@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLSHOPTHOITRANGModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLSHOPTHOITRANGEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiTietHoaDons" EntityType="QLSHOPTHOITRANGModel.ChiTietHoaDon" />
+    <EntitySet Name="HoaDons" EntityType="QLSHOPTHOITRANGModel.HoaDon" />
+    <EntitySet Name="KhachHangs" EntityType="QLSHOPTHOITRANGModel.KhachHang" />
+    <EntitySet Name="LoaiSanPhams" EntityType="QLSHOPTHOITRANGModel.LoaiSanPham" />
+    <EntitySet Name="NhaCungCaps" EntityType="QLSHOPTHOITRANGModel.NhaCungCap" />
+    <EntitySet Name="SanPhams" EntityType="QLSHOPTHOITRANGModel.SanPham" />
+    <EntitySet Name="sysdiagrams" EntityType="QLSHOPTHOITRANGModel.sysdiagram" />
+    <AssociationSet Name="FK__ChiTietHoa__MaHD__1CF15040" Association="QLSHOPTHOITRANGModel.FK__ChiTietHoa__MaHD__1CF15040">
+      <End Role="HoaDon" EntitySet="HoaDons" />
+      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietHoa__MaSP__1DE57479" Association="QLSHOPTHOITRANGModel.FK__ChiTietHoa__MaSP__1DE57479">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__MaKH__1A14E395" Association="QLSHOPTHOITRANGModel.FK__HoaDon__MaKH__1A14E395">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SanPham__MaLoaiS__164452B1" Association="QLSHOPTHOITRANGModel.FK__SanPham__MaLoaiS__164452B1">
+      <End Role="LoaiSanPham" EntitySet="LoaiSanPhams" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SanPham__MaNCC__173876EA" Association="QLSHOPTHOITRANGModel.FK__SanPham__MaNCC__173876EA">
+      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ChiTietHoaDon">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaHD" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="HoaDon" Relationship="QLSHOPTHOITRANGModel.FK__ChiTietHoa__MaHD__1CF15040" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
+    <NavigationProperty Name="SanPham" Relationship="QLSHOPTHOITRANGModel.FK__ChiTietHoa__MaSP__1DE57479" FromRole="ChiTietHoaDon" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaHD" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayDat" Type="DateTime" Precision="0" />
+    <Property Name="NgayGiao" Type="DateTime" Precision="0" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MaKH" Type="Int32" />
+    <NavigationProperty Name="ChiTietHoaDons" Relationship="QLSHOPTHOITRANGModel.FK__ChiTietHoa__MaHD__1CF15040" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
+    <NavigationProperty Name="KhachHang" Relationship="QLSHOPTHOITRANGModel.FK__HoaDon__MaKH__1A14E395" FromRole="HoaDon" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="String" MaxLength="13" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="HoaDons" Relationship="QLSHOPTHOITRANGModel.FK__HoaDon__MaKH__1A14E395" FromRole="KhachHang" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="LoaiSanPham">
+    <Key>
+      <PropertyRef Name="MaLoaiSP" />
+    </Key>
+    <Property Name="MaLoaiSP" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiSP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="SanPhams" Relationship="QLSHOPTHOITRANGModel.FK__SanPham__MaLoaiS__164452B1" FromRole="LoaiSanPham" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNCC" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="String" MaxLength="13" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="SanPhams" Relationship="QLSHOPTHOITRANGModel.FK__SanPham__MaNCC__173876EA" FromRole="NhaCungCap" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="GioiTinh" Type="Int32" />
+    <Property Name="GiaBan" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="GiaNhap" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Anh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MaLoaiSP" Type="Int32" />
+    <Property Name="MaNCC" Type="Int32" />
+    <Property Name="SoLuongTon" Type="Int32" />
+    <NavigationProperty Name="ChiTietHoaDons" Relationship="QLSHOPTHOITRANGModel.FK__ChiTietHoa__MaSP__1DE57479" FromRole="SanPham" ToRole="ChiTietHoaDon" />
+    <NavigationProperty Name="LoaiSanPham" Relationship="QLSHOPTHOITRANGModel.FK__SanPham__MaLoaiS__164452B1" FromRole="SanPham" ToRole="LoaiSanPham" />
+    <NavigationProperty Name="NhaCungCap" Relationship="QLSHOPTHOITRANGModel.FK__SanPham__MaNCC__173876EA" FromRole="SanPham" ToRole="NhaCungCap" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__ChiTietHoa__MaHD__1CF15040">
+    <End Role="HoaDon" Type="QLSHOPTHOITRANGModel.HoaDon" Multiplicity="1" />
+    <End Role="ChiTietHoaDon" Type="QLSHOPTHOITRANGModel.ChiTietHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="ChiTietHoaDon">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHoa__MaSP__1DE57479">
+    <End Role="SanPham" Type="QLSHOPTHOITRANGModel.SanPham" Multiplicity="1" />
+    <End Role="ChiTietHoaDon" Type="QLSHOPTHOITRANGModel.ChiTietHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="ChiTietHoaDon">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__MaKH__1A14E395">
+    <End Role="KhachHang" Type="QLSHOPTHOITRANGModel.KhachHang" Multiplicity="0..1" />
+    <End Role="HoaDon" Type="QLSHOPTHOITRANGModel.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SanPham__MaLoaiS__164452B1">
+    <End Role="LoaiSanPham" Type="QLSHOPTHOITRANGModel.LoaiSanPham" Multiplicity="0..1" />
+    <End Role="SanPham" Type="QLSHOPTHOITRANGModel.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiSanPham">
+        <PropertyRef Name="MaLoaiSP" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="MaLoaiSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SanPham__MaNCC__173876EA">
+    <End Role="NhaCungCap" Type="QLSHOPTHOITRANGModel.NhaCungCap" Multiplicity="0..1" />
+    <End Role="SanPham" Type="QLSHOPTHOITRANGModel.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

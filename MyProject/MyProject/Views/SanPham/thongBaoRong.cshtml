@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "thongBaoRong";
+    Layout = "~/Views/Share/_LayoutPage.cshtml";
+}
+<div class="col-md-3">
+    <nav>
+        <ul class="menuProduct">
+            <li>
+                <a href="@Url.Action("SanPhamPartial", "SanPham")" class="tpnam_btn mb-0 listAll">Danh mục sản phẩm</a>
+                <ul class="tpnam_show">
+                    @foreach (var item in ViewBag.loaiSP) {
+                        <li><a href="@Url.Action("SanPhamTheoLoai", "SanPham", new { @maLoaiSP = item.MaLoaiSP })">@item.TenLoaiSP</a></li>
+                    }
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="col-md-9">
+    @using (Html.BeginForm("timKiemSanPham", "SanPham")) { 
+        <div class="d-flex mb-4" data-aos="fade-left">
+            <div class="group">
+                <input id="TimKiem" type="text" name="tenSP" autocomplete="off" required>
+                <label id="find">Tìm kiếm sản phẩm</label>
+            </div>
+            <button class="btnTimKiem btn000 ml-3" style="width: 90px; height: 40px; line-height: 16px;">Search</button>
+        </div>
+    }
+    <div class="text-center pt-5" data-aos="flip-right">
+        <h4 class="text-danger">@ViewBag.stringEmpty</h4>
+        <img src="~/Images/cart-empty.png" width="100" height="100" />
+    </div>
+</div>
+

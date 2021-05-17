@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MyProject.Models.GioHang>
+
+@{
+    Layout = null;
+}
+<div class="w-100 text-right">
+    @if (ViewBag.TongSoLuong == 0) { 
+        <div class="d-flex justify-content-center align-items-center flex-column h-100">
+            <p class="text-center">@ViewBag.thongBao</p>
+            <img src="~/Images/cart-empty.png" />
+        </div>
+    }
+    else {
+        <h4 style="font-size:15px;">Giỏ hàng của bạn</h4>
+        <hr />
+        <div class="row" style="height: 350px; overflow: auto; overflow-x: hidden">
+            @foreach (var item in Model) { 
+                <div class="col-md-4">
+                    <a href="@Url.Action("XemChiTiet", "SanPham", new { @masp = item.maSP })">
+                        <img src="@Url.Content("~/Images/" + item.hinhAnh)" width="300" height="300" /></a>
+                </div>
+                <div class="col-md-8">
+                    <p style="font-size: 15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis" class="mb-0">@item.tenSP.ToLower()</p>
+                    <span style="font-size: 13px;">Số lượng: @item.soLuong</span>
+                    <p class="text-danger">@String.Format("{0:0,0}", @item.donGia)<span style="font-size: 13px;"> đ</span></p>
+                </div>
+            }
+        </div>
+        <div class="xemGioHang d-flex justify-content-between align-items-center">
+            <p class="mb-0">Tổng: <span class="text-danger">@String.Format("{0:0,0}", @ViewBag.TongThanhTien)<span><span style="font-size: 11px;"> đ</span></p>
+            <a href="#" style="text-decoration:none" class="text-center m-0" data-toggle="modal" data-target="#exampleModal">Xem giỏ hàng</a>
+        </div>
+    }
+</div>

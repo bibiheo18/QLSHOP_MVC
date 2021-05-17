@@ -1,0 +1,33 @@
+﻿@model MyProject.SanPham
+
+@{
+    ViewBag.Title = "ChiTietSanPham";
+    Layout = "~/Views/Admin/LayoutAdmin.cshtml";
+}
+
+<div class="container__custom">
+    <div class="row">
+        <div class="col-md-6 text-center" data-aos="flip-right">
+            <a href="~/Images/@Model.Anh" data-lightbox="listImg">
+                <img src="~/Images/@Model.Anh" class="img-fluid" />
+            </a>
+        </div>
+        <div class="col-md-6">
+            <h2 style="font-weight: 400" class="pb-3" data-aos="fade-left">@Model.TenSP</h2>
+            <h4 style="font-weight: 400" class="pb-3" data-aos="fade-left">Giá: <span class="text-danger">@Model.GiaBan.Value.ToString("#,##0.###") VNĐ</span></h4>
+            <p style="color: red; font-size: 25px" data-aos="fade-left">Chi tiết sản phẩm</p>
+            @if (@Model.MoTa.Length > 200) { 
+                <p class="lead" data-aos="fade-left">@Model.MoTa.Substring(0,200)...</p>
+            }else{
+                <p class="lead" data-aos="fade-left">@Model.MoTa</p>
+            }       
+            <hr />
+            <div class="d-flex justify-content-between" data-aos="fade-left" data-aos-duration="1000">
+                <p>Mã sản phẩm: @Model.MaSP</p>
+                <a href="@Url.Action("SuaSanPham", "ThemXoaSua", new { @maSP = Model.MaSP})" class="btn btn-success">Sửa sản phẩm</a>
+            </div>
+            <hr />
+        </div>
+    </div>
+    <hr />
+</div>

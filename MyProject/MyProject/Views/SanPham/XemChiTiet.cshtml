@@ -1,0 +1,62 @@
+﻿@model MyProject.SanPham
+
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Share/_LayoutPage.cshtml";
+}
+<style>
+    .btnStyle {
+        border-radius: 6px;
+        cursor: pointer;    
+        color: #ffffff;
+        background-size: 200%;
+        padding: 13px;
+        width: 193px;
+        transition: all .5s !important;
+        outline: none;
+        border: none;
+    }
+
+        .btnStyle:focus {
+            outline: none;
+        }
+
+    .btn1 {
+        background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+    }
+
+    .btn2 {
+        background-image: linear-gradient(to left, #badc58,#6ab04c,#badc58);
+    }
+
+    .btnStyle:hover {
+        background-position: right;
+    }
+</style>
+<div class="row">
+    <div class="col-md-6 text-center" data-aos="flip-right">
+        <a href="~/Images/@Model.Anh" data-lightbox="listImg">
+            <img src="~/Images/@Model.Anh" class="img-fluid" />
+        </a>
+    </div>
+    <div class="col-md-6">
+        <h2 style="font-weight: 400" class="pb-3" data-aos="fade-left">@Model.TenSP</h2>
+        <h4 style="font-weight: 400" class="pb-3" data-aos="fade-left">Giá: <span class="text-danger">@Model.GiaBan.Value.ToString("#,##0.###") VNĐ</span></h4>
+        <p style="color: red; font-size: 25px" data-aos="fade-left">Chi tiết sản phẩm</p>
+        <p class="lead" data-aos="fade-left">@Model.MoTa</p>
+        <a href="@Url.Action("ThemGioHang", "GioHang", new { @msp = Model.MaSP, @strURL = Request.Url.ToString() })">
+            <button type="button" class="btnStyle btn1 mr-3" data-aos="fade-left" data-aos-duration="1000">
+                THÊM VÀO GIỎ</button></a>
+            <button class="btnStyle btn2" data-aos="fade-left" data-aos-duration="1000"><a href="@Url.Action("SanPhamPartial","SanPham")" class="text-white" style="text-decoration: none">XEM THÊM SẢN PHẨM</a></button>
+        
+        <br />
+        <br />
+        <hr />
+        <p data-aos="fade-left" data-aos-duration="1000">Mã sản phẩm: @Model.MaSP</p>
+        <hr />
+    </div>
+</div>
+
+
+
+

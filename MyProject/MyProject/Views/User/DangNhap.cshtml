@@ -1,0 +1,40 @@
+﻿@model MyProject.Models.Information
+
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Share/_LayoutPage.cshtml";
+}
+<div class="d-flex w-100">
+    <div class="modalLeft">
+        <h2>Đăng nhập</h2>
+        <p>
+            Đăng nhập để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích, nhận nhiều ưu đãi hấp dẫn.
+        </p>
+        <img src="~/Images/fashionGirl.png" class="img-fluid mt-3" />
+    </div>
+    <div class="modalRight">
+        @using (Html.BeginForm("DangNhap", "User", FormMethod.Post)) {
+            @Html.ValidationSummary(true){
+
+            <div class="form-group">
+                <label for="tenTaiKhoan">Tài khoản</label>
+                <div class="flex-column d-flex">
+                    @Html.TextBoxFor(model => model.UserName, new { autocomplete = "off", @placeholder = "Nhập tài khoản", @id = "tenTaiKhoan" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="matKhau">Mật khẩu</label>
+                <div class="flex-column d-flex">
+                    @Html.PasswordFor(model => model.Password, new { autocomplete = "off", @placeholder = "Nhập mật khẩu", @id = "matKhau" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <button class="btn btn-primary mr-3">Đăng nhập</button>
+            <button class="btn btn-success" type="button" data-toggle="modal" data-target="#popupLogin">Tạo tài khoản</button>
+            }
+            <p class="text-danger mt-3">@ViewBag.ThongBao</p>
+        }
+    </div>
+</div>

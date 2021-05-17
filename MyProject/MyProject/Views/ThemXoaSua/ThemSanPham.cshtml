@@ -1,0 +1,70 @@
+﻿@model MyProject.SanPham
+
+@{
+    ViewBag.Title = "ThemSanPham";
+    Layout = "~/Views/Admin/LayoutAdmin.cshtml";
+}
+
+<style>
+    span {
+        font-size:11px;
+        margin-top:5px;
+    }
+</style>
+<div class="container">
+    @using (Html.BeginForm()) { 
+        @Html.ValidationSummary(true){
+        <h2 class="text-center lead mb-3 font-weight-bold" style="font-size: 36px; text-shadow: 0 0 8px rgba(0,0,0,0.2)" data-aos="flip-right">Thêm sản phẩm</h2>
+        <div class="form-group">
+            <p class="font-weight-bold">Tên sản phẩm</p>
+            @Html.TextBoxFor(model => model.TenSP, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.TenSP, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Mô tả</p>
+            @Html.TextBoxFor(model => model.MoTa, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Giá bán</p>
+            @Html.TextBoxFor(model => model.GiaBan, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.GiaBan, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Giá nhập</p>
+            @Html.TextBoxFor(model => model.GiaNhap, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.GiaNhap, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Sản phẩm dành cho</p>
+            @Html.DropDownListFor(model => model.GioiTinh, new List<SelectListItem> { new SelectListItem { Text = "Nam", Value = "Nam", Selected = true }, new SelectListItem { Text = "Nữ", Value = "Nữ" } }, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Tên loại sản phẩm</p>
+            @Html.DropDownListFor(model => model.MaLoaiSP, null, "Loại sản phẩm", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.MaLoaiSP, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Tên nhà cung cấp</p>
+            @Html.DropDownListFor(model => model.MaNCC, null, "Tên nhà cung cấp", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.MaNCC, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Số lượng tồn</p>
+            @Html.TextBoxFor(model => model.SoLuongTon, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SoLuongTon, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <p class="font-weight-bold">Hình ảnh</p>
+            @Html.TextBoxFor(model => model.Anh, new { @class = "form-control", type = "file" })
+            @Html.ValidationMessageFor(model => model.Anh)
+        </div>
+        <div class="text-center">
+            <button class="btn btn-outline-danger" type="submit" style="letter-spacing: 1px;">
+                Thêm sản phẩm
+            </button>
+        </div>
+    }
+    }
+</div>

@@ -1,0 +1,85 @@
+﻿@model MyProject.Models.Information
+
+@{
+    Layout = null;
+}
+
+
+@using (Html.BeginForm("DangKy", "User", FormMethod.Post)) { 
+    @Html.ValidationSummary(true){
+    <div class="form-group d-flex align-items-center">
+        <label for="tenKH">Họ tên</label>
+        <div class="flex-column d-flex">
+            @Html.TextBoxFor(model => model.tenKhachHang, new { autocomplete = "off", @placeholder = "Nhập họ tên" })
+            @Html.ValidationMessageFor(model => model.tenKhachHang, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+    <div class="form-group d-flex align-items-center" style="margin-bottom:8px">
+        <label for="ngaySinh">Ngày sinh<br /><span style="font-size:13px" class="text-muted">(mm/dd/yyyy)</span></label>
+        <div class="flex-column d-flex">
+            @Html.TextBoxFor(model => model.ngaySinh, new { autocomplete = "off", @placeholder = "Nhập ngày sinh", type = "date" })
+            @Html.ValidationMessageFor(model => model.ngaySinh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="gioiTinh">Giới tính</label>
+        <div class="flex-column d-flex">
+            @Html.DropDownListFor(model => model.gioitinh, new List<SelectListItem> { new SelectListItem { Text = "Nam", Value = "Nam", Selected = true }, new SelectListItem { Text = "Nữ", Value = "Nữ" } }, new { Name = "gioiTinh", @id = "gioiTinh", @class = "form-control w-100" })
+            @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="taiKhoan">Tên tài khoản</label>
+        <div class="flex-column d-flex">
+            @Html.TextBoxFor(model => model.tendangnhap, new { autocomplete = "off", @placeholder = "Nhập tài khoản" })
+            @Html.ValidationMessageFor(model => model.tendangnhap, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="matKhau">Mật khẩu</label>
+        <div class="flex-column d-flex">
+            @Html.PasswordFor(model => model.matkhau, new { autocomplete = "off", @placeholder = "Nhập mật khẩu" })
+            @Html.ValidationMessageFor(model => model.matkhau, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="reMatKhau">Nhập lại mật khẩu</label>
+        <div class="flex-column d-flex">
+            @Html.PasswordFor(model => model.nhaplaiMK, new { autocomplete = "off", @placeholder = "Xác nhận mật khẩu" })
+            @Html.ValidationMessageFor(model => model.nhaplaiMK, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="diaChi">Địa chỉ</label>
+        <div class="flex-column d-flex">
+            @Html.TextBoxFor(model => model.diachi, new { autocomplete = "off", @placeholder = "Nhập địa chỉ" })
+            @Html.ValidationMessageFor(model => model.diachi, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="email">Email</label>
+        <div class="flex-column d-flex">
+            @Html.TextBoxFor(model => model.email, new { autocomplete = "off", @placeholder = "Email của bạn" })
+            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="soDienThoai">Số điện thoại</label>
+        <div class="flex-column d-flex">
+            @Html.TextBoxFor(model => model.dienthoai, new { autocomplete = "off", @placeholder = "Nhập số điện thoại" })
+            @Html.ValidationMessageFor(model => model.dienthoai, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <label style="width:123px"></label>
+        <button class="btn btn-success" style="width:400px">Đăng kí</button>
+    </div>
+    <div class="mt-3">
+        <label style="width:137px"></label>
+        <span style="font-size:13px;"> Khi bạn nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua <label style="width:137px"></label> bán theo điều kiện sử dụng và chính sách của <span class="text-primary">MarkLeo</span>.</span>
+    </div>
+    }
+
+}
+

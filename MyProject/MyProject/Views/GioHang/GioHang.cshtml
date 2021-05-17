@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MyProject.Models.GioHang>
+
+@{
+    Layout = null;
+}
+@if (ViewBag.TongSoLuong == 0) { 
+    @Html.Action("GioHangTrong", "GioHang")
+}
+else {
+    <table class="table table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th style="width: 300px;">Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+                <th colspan="2" class="text-center">
+                    <button class="btn btn-danger"><a href="@Url.Action("XoaGioHangAll", "GioHang")" class="text-white" style="text-decoration:none">Huỷ hết sản phẩm</a></button></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) { 
+                <tr>
+                    <td>@item.maSP</td>
+                    <td>@item.tenSP</td>
+                    <td style="width: 120px">
+                        <a href="~/Images/@item.hinhAnh" data-lightbox="listImg">
+                            <img src="~/Images/@item.hinhAnh" height="70" /></a>
+                    </td>
+                    @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { @maSP = item.maSP })) { 
+                        <td>
+                            <input name="txtSoLuong" style="width:50px" type="number" value="@item.soLuong" min="1" max="100" /></td>
+                        <td>
+                            @String.Format("{0:0,0}", @item.donGia)
+                        </td>
+                        <td>
+                            @String.Format("{0:0,0}", @item.thanhTien)
+                        </td>
+                        <td style="width: 190px">
+                            <button class="btn btn-info">Cập nhật giỏ hàng</button></td>
+                        <td>
+                            <button class="btn btn-danger"><a class="text-white" style="text-decoration:none" href="@Url.Action("XoaGioHang", "GioHang", new { @maSP = item.maSP })">Huỷ</a></button></td>
+                    }
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" class="text-right">Tổng cộng: <span class="text-danger">@ViewBag.TongSoLuong</span></td>
+                <td colspan="2" class="text-right font-weight-bold">Tổng thành tiền: </td>
+                <td colspan="2" class="text-right"><span class="text-danger font-weight-bold">@String.Format("{0:0,0}", ViewBag.TongThanhTien) VND</span></td>
+            </tr>
+        </tfoot>
+    </table>
+}
+
+
+

@@ -1,0 +1,132 @@
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\MyProject.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\MyProject.pdb
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\obj\Debug\MyProject.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\obj\Debug\MyProject.pdb
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.Mvc.dll
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.Mvc.xml
+C:\Users\Admin\Desktop\ShopBanQuanAo\MyProject\MyProject\bin\MyProject.dll.config
+D:\ShopBanQuanAo\MyProject\MyProject\bin\MyProject.dll.config
+D:\ShopBanQuanAo\MyProject\MyProject\bin\MyProject.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\MyProject.pdb
+D:\ShopBanQuanAo\MyProject\MyProject\bin\EntityFramework.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\Microsoft.Web.Infrastructure.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\Newtonsoft.Json.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.Mvc.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Net.Http.Formatting.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Helpers.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.WebHost.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Mvc.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Razor.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Deployment.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Razor.dll
+D:\ShopBanQuanAo\MyProject\MyProject\bin\EntityFramework.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\PagedList.Mvc.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\Newtonsoft.Json.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Net.Http.Formatting.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Helpers.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Http.WebHost.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Mvc.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.Razor.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Deployment.xml
+D:\ShopBanQuanAo\MyProject\MyProject\bin\System.Web.WebPages.Razor.xml
+D:\ShopBanQuanAo\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+D:\ShopBanQuanAo\MyProject\MyProject\obj\Debug\MyProject.dll
+D:\ShopBanQuanAo\MyProject\MyProject\obj\Debug\MyProject.pdb
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\MyProject.dll.config
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\MyProject.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\MyProject.pdb
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\EntityFramework.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\Microsoft.Web.Infrastructure.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\Newtonsoft.Json.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\PagedList.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\PagedList.Mvc.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Net.Http.Formatting.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Helpers.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Http.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Http.WebHost.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Mvc.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Razor.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.WebPages.Deployment.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.WebPages.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.WebPages.Razor.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\EntityFramework.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\PagedList.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\PagedList.Mvc.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\Newtonsoft.Json.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Net.Http.Formatting.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Helpers.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Http.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Http.WebHost.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Mvc.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.Razor.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.WebPages.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.WebPages.Deployment.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\bin\System.Web.WebPages.Razor.xml
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\obj\Debug\MyProject.dll
+D:\FILE TEMPLTE LAB WEB\MyProject\MyProject\obj\Debug\MyProject.pdb
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\MyProject.dll.config
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\MyProject.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\MyProject.pdb
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\EntityFramework.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\Microsoft.Web.Infrastructure.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\Newtonsoft.Json.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\PagedList.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\PagedList.Mvc.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Net.Http.Formatting.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Helpers.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Http.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Http.WebHost.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Mvc.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Razor.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.WebPages.Deployment.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.WebPages.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.WebPages.Razor.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\EntityFramework.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\PagedList.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\PagedList.Mvc.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\Newtonsoft.Json.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Net.Http.Formatting.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Helpers.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Http.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Http.WebHost.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Mvc.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.Razor.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.WebPages.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.WebPages.Deployment.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\bin\System.Web.WebPages.Razor.xml
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\obj\Debug\MyProject.dll
+D:\Lưu file BT C#\BT Web\MyProject\MyProject\obj\Debug\MyProject.pdb
